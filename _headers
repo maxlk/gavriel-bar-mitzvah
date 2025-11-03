@@ -1,0 +1,17 @@
+# Set security headers for all assets (good practice)
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+
+# Caching for a year
+/images/*
+  Cache-Control: public, max-age=31536000, immutable
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Always revalidate the index
+/index.html
+  Cache-Control: no-cache
+/
+  Cache-Control: no-cache
