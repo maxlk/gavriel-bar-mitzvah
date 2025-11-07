@@ -4,14 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>בר המצווה של גבריאל</title>
+    <link
+      rel="preload"
+      href="/fonts/StamAshkenazCLM.woff2"
+      as="font"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/images/gavriel.avif"
+      as="image"
+      type="image/avif"
+    />
+
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       @font-face {
         font-family: "ShlomoStam";
         font-display: swap;
         src:
-          url("./fonts/ShlomoStam.woff2") format("woff2"),
-          url("./fonts/ShlomoStam.ttf") format("truetype");
+          url("/fonts/ShlomoStam.woff2") format("woff2"),
+          url("/fonts/ShlomoStam.ttf") format("truetype");
         font-weight: normal;
         font-style: normal;
       }
@@ -20,8 +33,8 @@
         font-family: "FreeSerif";
         font-display: swap;
         src:
-          url("./fonts/FreeSerif.woff2") format("woff2"),
-          url("./fonts/FreeSerif.otf") format("opentype");
+          url("/fonts/FreeSerif.woff2") format("woff2"),
+          url("/fonts/FreeSerif.otf") format("opentype");
         font-weight: normal;
         font-style: normal;
       }
@@ -30,8 +43,8 @@
         font-family: "KeterAramTsova";
         font-display: swap;
         src:
-          url("./fonts/KeterAramTsova.woff2") format("woff2"),
-          url("./fonts/KeterAramTsova.ttf") format("truetype");
+          url("/fonts/KeterAramTsova.woff2") format("woff2"),
+          url("/fonts/KeterAramTsova.ttf") format("truetype");
         font-weight: normal;
         font-style: normal;
       }
@@ -40,8 +53,8 @@
         font-family: "KeterYG";
         font-display: swap;
         src:
-          url("./fonts/KeterYG-Medium.woff2") format("woff2"),
-          url("./fonts/KeterYG-Medium.ttf") format("truetype");
+          url("/fonts/KeterYG-Medium.woff2") format("woff2"),
+          url("/fonts/KeterYG-Medium.ttf") format("truetype");
         font-weight: 500;
         font-style: normal;
       }
@@ -50,8 +63,8 @@
         font-family: "ShlomoSemiStam";
         font-display: swap;
         src:
-          url("./fonts/ShlomoSemiStam.woff2") format("woff2"),
-          url("./fonts/ShlomoSemiStam.ttf") format("truetype");
+          url("/fonts/ShlomoSemiStam.woff2") format("woff2"),
+          url("/fonts/ShlomoSemiStam.ttf") format("truetype");
         font-weight: normal;
         font-style: normal;
       }
@@ -60,8 +73,8 @@
         font-family: "Shofar";
         font-display: swap;
         src:
-          url("./fonts/ShofarRegular.woff2") format("woff2"),
-          url("./fonts/ShofarRegular.ttf") format("truetype");
+          url("/fonts/ShofarRegular.woff2") format("woff2"),
+          url("/fonts/ShofarRegular.ttf") format("truetype");
         font-weight: normal;
         font-style: normal;
       }
@@ -70,8 +83,8 @@
         font-family: "StamAshkenazCLM";
         font-display: swap;
         src:
-          url("./fonts/StamAshkenazCLM.woff2") format("woff2"),
-          url("./fonts/StamAshkenazCLM.ttf") format("truetype");
+          url("/fonts/StamAshkenazCLM.woff2") format("woff2"),
+          url("/fonts/StamAshkenazCLM.ttf") format("truetype");
         font-weight: normal;
         font-style: normal;
       }
@@ -80,8 +93,8 @@
         font-family: "TaameyFrankCLM";
         font-display: swap;
         src:
-          url("./fonts/TaameyFrankCLM-Medium.woff2") format("woff2"),
-          url("./fonts/TaameyFrankCLM-Medium.ttf") format("truetype");
+          url("/fonts/TaameyFrankCLM-Medium.woff2") format("woff2"),
+          url("/fonts/TaameyFrankCLM-Medium.ttf") format("truetype");
         font-weight: 500;
         font-style: normal;
       }
@@ -138,11 +151,11 @@
       }
 
       #cover {
-        background-image: url("./images/gavriel.jpg"); /* Base Fallback for all browsers */
+        background-image: url("/images/gavriel.jpg"); /* Base Fallback for all browsers */
         background-image: image-set(
-          "./images/gavriel.avif" type("image/avif"),
-          "./images/gavriel.webp" type("image/webp"),
-          "./images/gavriel.jpg" type("image/jpeg")
+          "/images/gavriel.avif" type("image/avif"),
+          "/images/gavriel.webp" type("image/webp"),
+          "/images/gavriel.jpg" type("image/jpeg")
         );
         background-size: cover;
         background-position: center;
@@ -190,7 +203,7 @@
 
       <!-- 2. Секция: Детали События (Секция 2 - Светлый, более заметный фон) -->
       <section
-        id="details"
+        id="date-and-time"
         class="snap-section bg-white/50 text-gray-800 backdrop-blur-sm"
       >
         <div

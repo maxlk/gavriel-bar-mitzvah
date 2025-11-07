@@ -15,3 +15,8 @@
   Cache-Control: no-cache
 /
   Cache-Control: no-cache
+
+# Preload fonts and images
+/
+  Link: </fonts/StamAshkenazCLM.woff2>; rel=preload; as=font; type="font/woff2"; crossorigin=anonymous
+  Link: </images/gavriel.avif>; rel=preload; as=image; type="image/avif"
