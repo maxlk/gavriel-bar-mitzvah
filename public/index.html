@@ -284,11 +284,13 @@
         sessionStorage.removeItem("scrollTop");
       }
 
-      setTimeout(() => {
-        const scrollTop = articleEl.scrollTop;
-        sessionStorage.setItem("scrollTop", `${scrollTop}`);
-        window.location.reload();
-      }, 1000);
+      if (location.hash === "#reload") {
+        setTimeout(() => {
+          const scrollTop = articleEl.scrollTop;
+          sessionStorage.setItem("scrollTop", `${scrollTop}`);
+          window.location.reload();
+        }, 1000);
+      }
     </script>
   </body>
 </html>
