@@ -1,0 +1,23 @@
+{
+  "name": "gavriel-bar-mitzvah",
+  "version": "1.0.0",
+  "description": "Inivitation card site to Gavriel's Bar Mitzvah",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxlk/gavriel-bar-mitzvah.git"
+  },
+  "author": "Maxim Kulikov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maxlk/gavriel-bar-mitzvah/issues"
+  },
+  "homepage": "https://gavriel-bar-mitzvah.pages.dev/",
+  "volta": {
+    "node": "24.11.0",
+    "npm": "11.6.2"
+  }
+}
