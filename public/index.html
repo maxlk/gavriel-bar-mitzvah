@@ -53,9 +53,11 @@
       <section id="cover" class="snap-section bg-black/30">
         <div class="absolute bottom-10 p-4 w-full text-center">
           <h1
-            class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white drop-shadow-lg"
+            class="text-4xl text-left sm:text-6xl font-extrabold tracking-tight text-sky-600 drop-shadow-lg"
           >
-            אנו שמחים להזמין אתכם לבר המצווה של גבריאל
+            אנו שמחים להזמין אתכם לטקס העלייה לתורה של בננו האהוב<br />
+            <span class="text-8xl">גבריאל&nbsp;</span>
+            <!-- אני שמח להזמין אתכם לטקס העלייה לתורה שלי -->
           </h1>
         </div>
       </section>
@@ -68,10 +70,17 @@
         <div
           class="p-6 md:p-10 max-w-2xl text-center rounded-xl shadow-2xl bg-white/80"
         >
-          <h2 class="text-3xl sm:text-4xl font-bold mb-4">פרטי האירוע</h2>
+          <h2 class="text-3xl sm:text-4xl font-bold mb-4">1.12.2025</h2>
+          <p
+            class="text-xl text-start sm:text-2xl font-medium leading-relaxed justify-self-center pb-4"
+          >
+            <span class="font-bold">12:00</span> קבלת פנים<br />
+            <span class="font-bold">12:30</span> תחילת הטקס<br />
+            <span class="font-bold">13:15</span> סעודת מצווה קלה<br />
+          </p>
           <p class="text-xl sm:text-2xl font-medium leading-relaxed">
-            האירוע יתקיים ב-1 בדצמבר בשעה 11:00 בבית הכנסת הגדול אוהל שרה ברחוב
-            בנימין 45
+            בית הכנסת הגדול אוהל שרה<br />
+            ברחוב בנימין 45 רחובות
           </p>
         </div>
       </section>
@@ -139,5 +148,21 @@
         </div>
       </section>
     </article>
+
+    <script>
+      // Live reload with scroll position preservation
+      const articleEl = document.getElementsByTagName("article")[0];
+      const scrollTop = sessionStorage.getItem("scrollTop");
+      if (scrollTop) {
+        articleEl.scrollTo(0, parseInt(scrollTop));
+        sessionStorage.removeItem("scrollTop");
+      }
+
+      setTimeout(() => {
+        const scrollTop = articleEl.scrollTop;
+        sessionStorage.setItem("scrollTop", `${scrollTop}`);
+        window.location.reload();
+      }, 1000);
+    </script>
   </body>
 </html>
