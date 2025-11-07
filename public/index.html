@@ -6,6 +6,86 @@
     <title>בר המצווה של גבריאל</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+      @font-face {
+        font-family: "ShlomoStam";
+        font-display: swap;
+        src:
+          url("./fonts/ShlomoStam.woff2") format("woff2"),
+          url("./fonts/ShlomoStam.ttf") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "FreeSerif";
+        font-display: swap;
+        src:
+          url("./fonts/FreeSerif.woff2") format("woff2"),
+          url("./fonts/FreeSerif.otf") format("opentype");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "KeterAramTsova";
+        font-display: swap;
+        src:
+          url("./fonts/KeterAramTsova.woff2") format("woff2"),
+          url("./fonts/KeterAramTsova.ttf") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "KeterYG";
+        font-display: swap;
+        src:
+          url("./fonts/KeterYG-Medium.woff2") format("woff2"),
+          url("./fonts/KeterYG-Medium.ttf") format("truetype");
+        font-weight: 500;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "ShlomoSemiStam";
+        font-display: swap;
+        src:
+          url("./fonts/ShlomoSemiStam.woff2") format("woff2"),
+          url("./fonts/ShlomoSemiStam.ttf") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Shofar";
+        font-display: swap;
+        src:
+          url("./fonts/ShofarRegular.woff2") format("woff2"),
+          url("./fonts/ShofarRegular.ttf") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "StamAshkenazCLM";
+        font-display: swap;
+        src:
+          url("./fonts/StamAshkenazCLM.woff2") format("woff2"),
+          url("./fonts/StamAshkenazCLM.ttf") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "TaameyFrankCLM";
+        font-display: swap;
+        src:
+          url("./fonts/TaameyFrankCLM-Medium.woff2") format("woff2"),
+          url("./fonts/TaameyFrankCLM-Medium.ttf") format("truetype");
+        font-weight: 500;
+        font-style: normal;
+      }
+
       /* Установка шрифта Inter по умолчанию и стили для плавного скроллинга */
       body {
         font-family: "Inter", sans-serif;
@@ -16,6 +96,45 @@
         height: 100vh;
         overflow-y: scroll;
         scroll-snap-type: y mandatory;
+      }
+
+      .font-torah-1 {
+        font-family: "ShlomoStam", "Inter", sans-serif;
+      }
+      .font-torah-2 {
+        font-family: "StamAshkenazCLM", "Inter", sans-serif;
+      }
+
+      .font-1 {
+        font-family: "ShlomoStam", "Inter", sans-serif;
+      }
+
+      .font-2 {
+        font-family: "FreeSerif", "Inter", sans-serif;
+      }
+
+      .font-3 {
+        font-family: "KeterAramTsova", "Inter", sans-serif;
+      }
+
+      .font-4 {
+        font-family: "KeterYG", "Inter", sans-serif;
+      }
+
+      .font-5 {
+        font-family: "ShlomoSemiStam", "Inter", sans-serif;
+      }
+
+      .font-6 {
+        font-family: "Shofar", "Inter", sans-serif;
+      }
+
+      .font-7 {
+        font-family: "StamAshkenazCLM", "Inter", sans-serif;
+      }
+
+      .font-8 {
+        font-family: "TaameyFrankCLM", "Inter", sans-serif;
       }
 
       #cover {
@@ -51,12 +170,19 @@
     <article>
       <!-- 1. Секция: Приглашение (Секция 1 - Полупрозрачный фон тьмы) -->
       <section id="cover" class="snap-section bg-black/30">
-        <div class="absolute bottom-10 p-4 w-full text-center">
+        <div class="absolute bottom-10 p-4 pb-0 w-full text-center">
           <h1
-            class="text-4xl text-left sm:text-6xl font-extrabold tracking-tight text-sky-600 drop-shadow-lg"
+            class="text-4xl text-left sm:text-6xl font-extrabold font-7 tracking-tight text-sky-600 drop-shadow-lg drop-shadow-white"
           >
-            אנו שמחים להזמין אתכם לטקס העלייה לתורה של בננו האהוב<br />
-            <span class="text-8xl">גבריאל&nbsp;</span>
+            <span class="block pl-3">
+              אנו שמחים להזמין<br />
+              אתכם לטקס העלייה<br />
+              לתורה של בננו האהוב<br />
+            </span>
+            <span
+              class="text-8xl text-sky-600 text-center font-torah-2 font-normal block pt-9"
+              >גבריאל</span
+            >
             <!-- אני שמח להזמין אתכם לטקס העלייה לתורה שלי -->
           </h1>
         </div>
