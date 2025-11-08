@@ -18,7 +18,19 @@
     />
     <link
       rel="preload"
+      href="/fonts/ShofarRegular.woff2"
+      as="font"
+      crossorigin
+    />
+    <link
+      rel="preload"
       href="/images/background2.avif"
+      as="image"
+      type="image/avif"
+    />
+    <link
+      rel="preload"
+      href="/images/background3.avif"
       as="image"
       type="image/avif"
     />
@@ -184,16 +196,41 @@
         background-attachment: fixed;
       }
 
-      #date-and-time::before {
+      #map {
+        background-image: url("/images/background3.jpg"); /* Base Fallback for all browsers */
+        background-image: image-set(
+          "/images/background3.avif" type("image/avif"),
+          "/images/background3.webp" type("image/webp"),
+          "/images/background3.jpg" type("image/jpeg")
+        );
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+
+      #date-and-time,
+      #map {
+        isolation: isolate;
+      }
+
+      #date-and-time::before,
+      #map::before {
         content: "";
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(255, 255, 255, 0.3);
-        /* backdrop-filter: blur(5px); */
         z-index: -1;
+      }
+
+      #date-and-time::before {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+
+      #map::before {
+        background-color: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(2px);
       }
 
       /* Стиль для каждой секции, занимающей весь экран и с выравниванием для snap-scrolling */
@@ -238,7 +275,7 @@
       <!-- 2. Секция: Детали События (Секция 2 - Светлый, более заметный фон) -->
       <section
         id="date-and-time"
-        class="snap-section bg-white/50 text-gray-800 backdrop-blur-sm"
+        class="snap-section bg-white/50 text-gray-800"
       >
         <div
           class="px-6 py-9 md:p-10 max-w-2xl text-center font-6 text-sky-600 rounded-xl shadow-2xl bg-white/80 backdrop-blur-xs"
@@ -283,7 +320,7 @@
               href="https://waze.com/ul?q=בנימין 45 רחובות&navigate=yes"
               target="_blank"
               rel="noopener noreferrer"
-              class="flex items-center justify-center space-x-2 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50 text-xl sm:text-2xl"
+              class="flex items-center justify-center space-x-2 bg-sky-600 hover:bg-sky-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50 text-xl sm:text-2xl"
             >
               <!-- Иконка Waze -->
               <svg
