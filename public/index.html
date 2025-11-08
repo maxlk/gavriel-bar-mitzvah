@@ -125,12 +125,10 @@
       body {
         font-family: "Inter", sans-serif;
         height: 100vh;
-        height: 100dvh;
       }
 
       article {
         height: 100vh;
-        height: 100dvh;
         overflow-y: scroll;
         scroll-snap-type: y mandatory;
       }
@@ -249,17 +247,20 @@
       /* Стиль для каждой секции, занимающей весь экран и с выравниванием для snap-scrolling */
       .snap-section {
         height: 100vh;
-        height: 100dvh;
         scroll-snap-align: start;
+
         /* Добавляем градиент для лучшей читаемости текста на фоне */
-        background-color: rgba(0, 0, 0, 0.2); /* Общий темный оверлей */
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        color: white;
-        padding: 1rem;
+
+        padding: 1rem 1rem 4rem 1rem;
         position: relative; /* Для позиционирования внутреннего контента */
+      }
+
+      #cover {
+        justify-content: end;
       }
     </style>
   </head>
@@ -267,8 +268,8 @@
   <body class="selection:bg-indigo-600 selection:text-white">
     <article>
       <!-- 1. Секция: Приглашение (Секция 1 - Полупрозрачный фон тьмы) -->
-      <section id="cover" class="snap-section bg-black/30">
-        <div class="absolute bottom-10 p-4 pb-0 w-full text-center">
+      <section id="cover" class="snap-section flex-col justify-end">
+        <div class="bottom-10 p-4 pb-0 w-full text-center">
           <h1
             class="text-4xl text-left sm:text-6xl font-extrabold font-7 tracking-tight text-sky-600 drop-shadow-lg drop-shadow-white/50"
           >
