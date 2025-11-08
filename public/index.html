@@ -121,10 +121,14 @@
       body {
         font-family: "Inter", sans-serif;
         height: 100vh;
+        height: -webkit-fill-available;
+        height: 100svh;
       }
 
       article {
         height: 100vh;
+        height: -webkit-fill-available;
+        height: 100svh;
         overflow-y: scroll;
         scroll-snap-type: y mandatory;
       }
@@ -243,6 +247,8 @@
       /* Стиль для каждой секции, занимающей весь экран и с выравниванием для snap-scrolling */
       .snap-section {
         height: 100vh;
+        height: -webkit-fill-available;
+        height: 100svh;
         scroll-snap-align: start;
         /* Добавляем градиент для лучшей читаемости текста на фоне */
         background-color: rgba(0, 0, 0, 0.2); /* Общий темный оверлей */
