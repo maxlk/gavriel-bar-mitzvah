@@ -196,7 +196,8 @@
         background-attachment: fixed;
       }
 
-      #map {
+      #map,
+      #cant-wait {
         background-image: url("/images/background3.jpg"); /* Base Fallback for all browsers */
         background-image: image-set(
           "/images/background3.avif" type("image/avif"),
@@ -214,7 +215,8 @@
       }
 
       #date-and-time::before,
-      #map::before {
+      #map::before,
+      #cant-wait::before {
         content: "";
         position: absolute;
         top: 0;
@@ -231,6 +233,11 @@
       #map::before {
         background-color: rgba(0, 0, 0, 0.3);
         backdrop-filter: blur(2px);
+      }
+
+      #cant-wait::before {
+        background-color: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(5px);
       }
 
       /* Стиль для каждой секции, занимающей весь экран и с выравниванием для snap-scrolling */
@@ -345,16 +352,15 @@
 
       <!-- 4. Секция: Заключение (Секция 4 - Светлый, более заметный фон) -->
       <section
-        id="thank-you"
+        id="cant-wait"
         class="snap-section bg-white/50 text-gray-800 backdrop-blur-sm"
       >
         <div
-          class="p-6 md:p-10 max-w-2xl text-center rounded-xl shadow-2xl bg-white/80"
+          class="px-6 py-9 md:p-10 max-w-2xl text-center rounded-xl shadow-2xl bg-white/80 font-6 text-sky-600"
         >
-          <h2 class="text-3xl sm:text-4xl font-bold mb-4">תודה רבה</h2>
-          <p class="text-xl sm:text-2xl font-medium leading-relaxed">
+          <h2 class="text-3xl sm:text-4xl font-bold">
             מצפים בכיליון עיניים לראותכם
-          </p>
+          </h2>
         </div>
       </section>
     </article>
