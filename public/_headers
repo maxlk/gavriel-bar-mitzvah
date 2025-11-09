@@ -20,6 +20,3 @@
 /
   Link: </fonts/StamAshkenazCLM.woff2>; rel=preload; as=font; type="font/woff2"; crossorigin=anonymous
   Link: </images/gavriel.avif>; rel=preload; as=image; type="image/avif"
-  Link: </fonts/ShofarRegular.woff2>; rel=preload; as=font; type="font/woff2"; crossorigin=anonymous
-  Link: </images/background2.avif>; rel=preload; as=image; type="image/avif"
-  Link: </images/background3.avif>; rel=preload; as=image; type="image/avif"
