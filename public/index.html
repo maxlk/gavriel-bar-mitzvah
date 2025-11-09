@@ -291,23 +291,5 @@
         </div>
       </section>
     </article>
-
-    <script>
-      // Live reload with scroll position preservation
-      const articleEl = document.getElementsByTagName("article")[0];
-      const scrollTop = sessionStorage.getItem("scrollTop");
-      if (scrollTop) {
-        articleEl.scrollTo(0, parseInt(scrollTop));
-        sessionStorage.removeItem("scrollTop");
-      }
-
-      if (location.hash === "#reload") {
-        setTimeout(() => {
-          const scrollTop = articleEl.scrollTop;
-          sessionStorage.setItem("scrollTop", `${scrollTop}`);
-          window.location.reload();
-        }, 1000);
-      }
-    </script>
   </body>
 </html>
