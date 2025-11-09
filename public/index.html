@@ -181,13 +181,53 @@
       #cover {
         justify-content: end;
       }
+
+      /* scroll-hint scroll feedback animation */
+      @media (prefers-reduced-motion: reduce) {
+        .scroll-hint {
+          animation: none !important;
+          transition: none !important;
+        }
+      }
+
+      @keyframes scroll-hint {
+        0% {
+          margin-top: 0;
+        }
+        80% {
+          margin-top: 0;
+        }
+        85% {
+          margin-top: -100px;
+        }
+        87% {
+          margin-top: -100px;
+        }
+        90% {
+          margin-top: 0;
+        }
+        95% {
+          margin-top: -60px;
+        }
+        97% {
+          margin-top: -60px;
+        }
+        100% {
+          margin-top: 0;
+        }
+      }
+
+      .scroll-hint {
+        will-change: margin-top;
+        animation: scroll-hint 5s linear infinite 3s;
+      }
     </style>
   </head>
 
   <body class="selection:bg-indigo-600 selection:text-white">
     <article>
       <!-- 1. Секция: Приглашение (Секция 1 - Полупрозрачный фон тьмы) -->
-      <section id="cover" class="snap-section flex-col justify-end">
+      <section id="cover" class="snap-section flex-col justify-end scroll-hint">
         <div class="bottom-10 p-4 pb-0 w-full text-center">
           <h1
             class="text-4xl text-left sm:text-6xl font-extrabold font-torah-2 tracking-tight text-sky-600 drop-shadow-lg drop-shadow-white/50"
@@ -291,5 +331,24 @@
         </div>
       </section>
     </article>
+
+    <script>
+      Array.from(document.querySelectorAll("section")).forEach((sectionEl) => {
+        sectionEl.addEventListener("click", () => {
+          const nextSectionEl = sectionEl.nextElementSibling;
+          if (nextSectionEl) {
+            nextSectionEl.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      const scrollHintTarget = document.querySelector(".scroll-hint");
+      scrollHintTarget.parentNode.addEventListener("scroll", () => {
+        scrollHintTarget.classList.remove("scroll-hint");
+      });
+    </script>
   </body>
 </html>
